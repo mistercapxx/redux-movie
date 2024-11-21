@@ -1,0 +1,11 @@
+.movie-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+ 
+}
+.spacer_on
+{
+    display: flex;
+    gap: 5px;
+}
