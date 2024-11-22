@@ -1,0 +1,18 @@
+@import './variables';
+
+///if something is repeating, like this button, it can be used as template everywhere 
+/// 
+@mixin button-style($bg-color,$text-color) {
+    background-color: $bg-color;
+    color:$text-color;
+    border: none;
+    width: 180px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: darken($bg-color,10%);
+    }
+}

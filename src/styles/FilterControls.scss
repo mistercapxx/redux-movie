@@ -1,0 +1,25 @@
+// @import './variables';
+@import './mixins.scss';
+
+.filter-button {
+    // background-color: $secondary-color;
+    // width: 10%;
+    // color: white;
+    // padding: 10px;
+    // margin: 5px;
+    // border-radius: 5px;
+    // cursor: pointer;
+    // transition: background-color 0.3s;
+    @include button-style(#ce0094,white);
+}
+ 
+  
+  //   &:hover {
+  //     background-color: lighten($secondary-color, 15%);
+  //   }
+  // }
+  
+  // .active {
+  //   background-color: darken($secondary-color, 10%);
+  // }
+  

@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { useDispatch } from "react-redux";
+import '../styles/MovieItem.scss';
 
 const MovieItem = ({ movie }) => {
   const dispatch = useDispatch();
@@ -44,7 +45,7 @@ const MovieItem = ({ movie }) => {
 
   ////every object from movies array will get whats below
   return (
-    <div>
+    <div className="movie-item ">
       <img src={movie.image} />
       <br />
       <br />
@@ -61,8 +62,8 @@ const MovieItem = ({ movie }) => {
       <button onClick={handleUpdate}>Update Movie</button>
       <br />
       <p>Rating: {movie.rating}</p>
-      <p>Genre:{movie.genre}</p>
-      <p>Status : {movie.watched ? "Watched" : "Unwatched"}</p>
+      <p>Genre: {movie.genre}</p>
+      <p>Status: {movie.watched ? "Watched" : "Unwatched"}</p>
       <button onClick={toggleWatched}>{movie.watched ? "Mark as Unwatched" : "Mark as Watched"}</button>
       <br />
       <br />

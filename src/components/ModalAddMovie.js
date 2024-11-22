@@ -1,6 +1,8 @@
 import React, { useCallback, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Modal, Box, Button, TextField } from '@mui/material';
+import '../styles/ModalAddMovie.scss';
+
 
 const ModalAddMovie = ({handleClose}) => {
     const dispatch = useDispatch();
@@ -22,20 +24,20 @@ const ModalAddMovie = ({handleClose}) => {
     ///because these values are depending on ModalAddMovie component state, we need to write them here
 
     ////if values of these deps not changing,func not calls again.
-    
+
     //needed to guarantee func will update with NEW state values to be updated (because callback saves 
     ///one func between renders and save it with starting values and state)
 
     ///
     return (
-        <Modal open onClose={handleClose}>
+        <Modal className='modal' open onClose={handleClose}>
 <Box sx={{
     position:'absolute',
     top:'50%',
     left:'50%',
     transform:'translate(-50%,-50%)',
     backgroundColor:'white',
-    padding:2,
+    padding:5,
     width:400,
     boxShadow:24,///shadow around
 

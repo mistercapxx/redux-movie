@@ -2,7 +2,7 @@ import { useEffect, useMemo } from "react";
 import { useSelector } from "react-redux";
 import { useFilter } from "../context/FilterContext";
 import MovieItem from "./MovieItem";
-import styles from '../styles/stylishlook.css';
+import '../styles/MovieList.scss';
 
 const MovieList = () => {
   const movies = useSelector(state => state.moviekey.movies);
