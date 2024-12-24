@@ -11,6 +11,10 @@ const HomePage = () => {
   const navigate = useNavigate();
 
   const handleGenerate = () => {
+    if (!movies || movies.length === 0) {
+      alert("Movies are not loaded yet!");
+      return;
+    }
 
     const filteredGenre = movies.filter((movie) => movie.genre === selectedGenre);  ///find ALL movies with THAT selected genre and return NEW filtered array
    
