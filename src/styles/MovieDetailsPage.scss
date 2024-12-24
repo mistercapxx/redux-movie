@@ -10,7 +10,7 @@
 
 
     .movie-details__image {
-        max-width: 100%;
+        max-width: 15%;
 
     }
     .movie-details__title {
@@ -25,8 +25,48 @@
         width: 500px;
         
     }
+    .movie-details__redirection {
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        font-size: 9px;
+        background-color: blue;
+        display: flex;
+        flex-direction: column;
+    }
 }
 .movie-details__button {
     @include button-style(#fff,$primary-color);
     margin-top: 20px;
 }
+
+@include respond-to(small) {
+    .movie-details
+    {
+        .movie-details__title
+        {
+            margin-top: 32px;
+           font-size: 15px;
+        }
+        .movie-details__image
+        {
+            max-width: 55%;
+        }
+       .movie-details__info
+       {
+        font-size: 12px;
+        width: 150px;
+       }
+       .movie-details__button
+       {
+        font-size: 10px;
+        width: 120px;
+       }
+       .movie-details__redirection {
+
+        height: 55px;
+        font-size: 8px;
+      }
+
+    }
+  }

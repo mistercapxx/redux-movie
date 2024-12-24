@@ -14,8 +14,9 @@ const MovieDetailsPage = () => {
 
 const generateDifferentMovie = () => {
   
-  const filteredGenre = movies.filter((mov) => mov.genre === movie.genre);
-  const randomMovie = filteredGenre[Math.floor(Math.random() * filteredGenre.length)];
+  const filteredGenre = movies.filter((mov) => mov.genre === movie.genre); ///keep already known genre and filter movies again
+  const availableMovies = filteredGenre.filter((cin)=> cin.genre !== movie.id); ///not to repeat same id
+  const randomMovie = availableMovies[Math.floor(Math.random() * availableMovies.length)]; ///get one movie
   navigate(`/movie/${randomMovie.id}`);
 }
 
@@ -36,21 +37,12 @@ const generateDifferentMovie = () => {
       <br />
       <button className="movie-details__button" onClick={generateDifferentMovie}>Generate Again</button>
 
-      <div style={{ position: "fixed", bottom: "20px", right: "20px" }}>
-        <Button
-          variant="contained"
-          onClick={()=>navigate('/movies')}
-          style={{
-            borderRadius: "50%",
-            width: "60px",
-            height: "60px",
-            fontSize: "9px",
-            backgroundColor: "blue",
-            display: "flex",
-            flexDirection: "column",
-         
-          }}
-        >
+      <div  style={{ position: "fixed", bottom: "20px", right: "20px" }}>
+      <Button
+  className="movie-details__redirection"
+  variant="contained"
+  onClick={() => navigate('/movies')}
+>
          <span style={{ wordBreak: "break-word" }}>See</span>
   <span>All Movies</span>
         </Button>

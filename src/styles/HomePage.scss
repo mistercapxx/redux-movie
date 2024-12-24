@@ -81,3 +81,14 @@
     }
   }
 }
+
+@include respond-to(small) {
+  .homepage__button {
+    font-size: 20px;
+    width: 180px;
+  }
+  .homepage__select {
+    font-size: 10px;
+    width: 130px;
+  }
+}

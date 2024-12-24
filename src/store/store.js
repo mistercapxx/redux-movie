@@ -2,12 +2,13 @@ import { configureStore } from "@reduxjs/toolkit";
 import furyroad from "../img/max.jpeg";
 import shawshank from "../img/shaw.jpg";
 import forsazh from "../img/forsazh.jpg";
-import joker2 from "../img/joker2.png";
+import joker from "../img/joker.jpg";
 import hangover from "../img/hangover.jpg";
 import freddy from "../img/freddy.jpg";
 import inception from "../img/inception.jpg"
 import smile from "../img/smile.jpeg"
 import gosling from "../img/gosling.jpeg"
+import intelligence from "../img/intelligence.jpg"
 // let movieId = 1; ///counter for id parameter of movie object ///old counter for id of new added movie
 
 // const initialState = {
@@ -55,7 +56,7 @@ const initialState = {
             watched: false,
             genre: "Drama",
             rating: 9.3,
-            image: joker2,
+            image: joker,
             description:'Arthur Fleck, a failed clown and aspiring stand-up comedian whose descent into mental illness and nihilism culminates with the emergence of an alter-ego known as "Joker" and inspires a violent countercultural revolution against the wealthy in a decaying Gotham City'
           },
           {
@@ -75,7 +76,7 @@ const initialState = {
             watched: false,
             genre: "Comedy",
             rating: 7.7,
-            image: hangover,
+            image: intelligence,
             description:'Three buddies wake up from a bachelor party in Las Vegas with no memory of the previous night and the bachelor missing. They must make their way around the city in order to find their friend in time for his wedding.'
           },
           {

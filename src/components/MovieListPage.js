@@ -5,6 +5,7 @@ import FilterControls from "./FilterControls";
 import ModalAddMovie from "./ModalAddMovie";
 import { Button } from "@mui/material";
 
+
 const MovieListPage = () => {
   const [openModal, setOpenModal] = useState(false);
   const handleOpenModal = () => setOpenModal(true);

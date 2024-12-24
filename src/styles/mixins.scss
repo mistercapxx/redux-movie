@@ -17,3 +17,11 @@ justify-content: center;
         background-color: darken($bg-color,15%);
     }
 }
+
+@mixin respond-to($media-query) {
+    @if $media-query == small {
+        @media (max-width:600px) {
+            @content;
+        }
+    }
+}

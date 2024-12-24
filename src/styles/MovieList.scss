@@ -1,6 +1,18 @@
+@import './mixins.scss';
+@import './variables';
+
 .movie-list-container {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+
+}
+
+@include respond-to(small) {
+.movie-list-container {
+ gap: 20px;
+ justify-content: center;
+
+}
 
 }
