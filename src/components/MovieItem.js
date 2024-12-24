@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { useDispatch } from "react-redux";
 import '../styles/MovieItem.scss';
 
-const MovieItem = ({ movie }) => {
+const MovieItem = ({ movie }) => { ///this props is all info of every movie (id,title,image)
   const dispatch = useDispatch();
 
   const titleInputRef = useRef(null); //creating reference for input field to change its value and focus
@@ -17,15 +17,16 @@ const MovieItem = ({ movie }) => {
     dispatch({
       ///send action to redux
       type: "UPDATE_MOVIE",
-      payload: { 
-        id: movie.id, ///this movie's id  
-        title: titleInputRef.current.value, ///save current typed values
+      payload: { ////we will use in redux store these id as action.payload.id, title as action.payload.title
+        id: movie.id, ///this movie's id. id is taken from props again
+        title: titleInputRef.current.value, ///save current typed in ref input 
         ///title and producer
         ///that we type in input fields
         producer: producerInputRef.current.value,
       },
     });
   };
+
   const toggleWatched = () => {
     dispatch({
       type: "TOGGLE_MOVIE_WATCHED",
@@ -47,7 +48,6 @@ const MovieItem = ({ movie }) => {
   return (
     <div className="movie-item ">
       <img src={movie.image} />
-      <br />
       <br />
       <input ref={titleInputRef} defaultValue={movie.title} />
       {/* <button onClick={() => handleEdit(titleInputRef)}>FOCUS ON</button> */}
@@ -75,4 +75,5 @@ const MovieItem = ({ movie }) => {
     </div>
   );
 };
+
 export default MovieItem;

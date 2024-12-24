@@ -4,15 +4,16 @@
 /// 
 @mixin button-style($bg-color,$text-color) {
     background-color: $bg-color;
-    color:$text-color;
-    border: none;
-    width: 180px;
+display: flex;
+justify-content: center;
+ width: 200px;
     padding: 10px 15px;
+    border: 1px solid black;
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s;
 
     &:hover {
-        background-color: darken($bg-color,10%);
+        background-color: darken($bg-color,15%);
     }
 }

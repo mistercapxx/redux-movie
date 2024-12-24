@@ -47,14 +47,15 @@ function App() {
 
   return (
     <Provider store={store}>
-<FilterProvider>
+<FilterProvider> 
     <Router>
       <Routes>
         <Route path="/" element={<HomePage/>}/>
         {/* <Route path="/add-movie" element={<AddMovieForm/>}/> */}
         {/* <Route path="/movies" element={<MovieListPage/>}/> */}
         <Route path='/movies' element={<MovieListPage/>}/>
-      <Route path='/movie/:movieId' element={<MovieDetailsPage/>}/>
+        {/*  */}
+      <Route path='/movie/:movieId' element={<MovieDetailsPage/>}/> 
       </Routes>
     </Router>
     </FilterProvider>

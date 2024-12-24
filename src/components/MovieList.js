@@ -5,11 +5,9 @@ import MovieItem from "./MovieItem";
 import '../styles/MovieList.scss';
 
 const MovieList = () => {
-  const movies = useSelector(state => state.moviekey.movies);
+  const movies = useSelector(state => state.moviekey.movies); ///get movies again
 
-  const { filter } = useFilter();//access to context of filter straight, by using useFilter
-  ///MovieList grabs filter state after FilterControls where we have buttons to choose
-  //so it shows filtered content then
+  const { filter } = useFilter();///use shortcut and grab filter
 
   useEffect(()=> {
       console.log('Component mounted');
@@ -36,19 +34,19 @@ const MovieList = () => {
     switch (filter) {///
       ///if we click on some FilterControls buttons, we getting filter and rerender array
       case "WATCHED":
-        return movies.filter(movie => movie.watched);///new arr where watched = true
+        return movies.filter(movie => movie.watched);///filter to new arr where watched = true
       case "UNWATCHED":
         return movies.filter(movie => !movie.watched);
       default:
         return movies;///filter - 'ALL'
     }
-  }, [movies, filter]);/// memo only works if movies changed or we filtering
+  }, [movies, filter]);/// memo only renders if movies changed or we filtering
 
   ///sum up : memo filters only if deps are changing, if not - just use previous result from last filter
 
 
   ///conditional render for exceptions
-  if(filter === 'WATCHED' && filteredMovies.length === 0) {
+  if(filter === 'WATCHED' && filteredMovies.length === 0) { ///if no such objects with condition in array
     return <div>No watched movies yet</div>
   }
   if(filter ===  'UNWATCHED' && filteredMovies.length === 0) {
@@ -59,7 +57,7 @@ const MovieList = () => {
   return (
     <div className="movie-list-container">
       {filteredMovies.map((movie) => (
-        <MovieItem key={movie.id} movie={movie} />///pass every movies info to props movie (id,title,producer,watched)
+        <MovieItem key={movie.id} movie={movie} />///pass every movie info to props movie (id,title,producer,watched)
       ))}
     </div>
   );

@@ -1,0 +1,32 @@
+@import './variables';
+@import './mixins.scss';
+
+.movie-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+ 
+
+
+    .movie-details__image {
+        max-width: 100%;
+
+    }
+    .movie-details__title {
+        font-size: 36px;
+        font-weight: bold;
+    }
+    .movie-details__info {
+        font-size: 18px;
+        color: $primary-color;
+        margin-bottom: 10px;
+        text-align: center;
+        width: 500px;
+        
+    }
+}
+.movie-details__button {
+    @include button-style(#fff,$primary-color);
+    margin-top: 20px;
+}

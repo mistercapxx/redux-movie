@@ -12,8 +12,8 @@ const ModalAddMovie = ({handleClose}) => {
     const [genre,setGenre] = useState('');
     const [rating,setRating]=useState('');
 
-    const addMovie = useCallback(() => {
-      
+    const addMovie = useCallback(() => { ///callback remembers the only one worked function and keeps it same
+        ///until deps are changed
             dispatch({
                 type:'ADD_MOVIE',
                 payload: {title,producer,genre,rating,watched:false},
@@ -44,26 +44,36 @@ const ModalAddMovie = ({handleClose}) => {
 }}
 >
     <h2>New Movie</h2>
+    <Box sx={{display:'flex',gap:2}}>
     <TextField
          label="Movie Title"
     value={title}
-    onChange={(e)=>setTitle(e.target.value)}/>
+    onChange={(e)=>setTitle(e.target.value)}
+ />
   
     <TextField
      label="Producer"
     value={producer}
-    onChange={(e)=>setProducer(e.target.value)}/>
-      <br /><br />
+    onChange={(e)=>setProducer(e.target.value)}
+/>
+</Box>
+      <br /><br />  
+      <Box sx={{display:'flex',gap:2}}>
       <TextField
           label="Genre"
     value={genre}
-    onChange={(e)=>setGenre(e.target.value)}/>
+    onChange={(e)=>setGenre(e.target.value)}
+ 
+/>
 
         <TextField
           label="Rating"
     value={rating}
-    onChange={(e)=>setRating(e.target.value)}/>
+    onChange={(e)=>setRating(e.target.value)}
+  />
+  </Box>
      <br /><br />
+
      <Button variant="contained" onClick={addMovie} style={{marginLeft:80}}>Add Movie</Button>
      <Button variant="contained" onClick={handleClose} style={{marginLeft:10}}>
         Cancel
