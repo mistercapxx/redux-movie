@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/redux-movie/static/css/main.43c655f4.css",
-    "main.js": "/redux-movie/static/js/main.53d856c7.js",
+    "main.css": "/redux-movie/static/css/main.53c606e6.css",
+    "main.js": "/redux-movie/static/js/main.397d5cb8.js",
     "static/media/shaw.jpg": "/redux-movie/static/media/shaw.08fff31d97253a1c703c.jpg",
-    "static/media/joker2.png": "/redux-movie/static/media/joker2.f9c35086244c8f197175.png",
+    "static/media/intelligence.jpg": "/redux-movie/static/media/intelligence.cf50d0176a2919f1b917.jpg",
     "static/media/inception.jpg": "/redux-movie/static/media/inception.0f66ab851f30c0cce78e.jpg",
     "static/media/superhero-black-and-white-illustration-free-vector.jpg": "/redux-movie/static/media/superhero-black-and-white-illustration-free-vector.38ae9d73c2dc9899226a.jpg",
     "static/media/hangover.jpg": "/redux-movie/static/media/hangover.d957c5dcf7039d554d12.jpg",
+    "static/media/joker.jpg": "/redux-movie/static/media/joker.452c359af9d6527021d0.jpg",
     "static/media/forsazh.jpg": "/redux-movie/static/media/forsazh.a9aa443358fcf66a6d62.jpg",
     "static/media/freddy.jpg": "/redux-movie/static/media/freddy.db9ff86810d127d7f224.jpg",
     "static/media/max.jpeg": "/redux-movie/static/media/max.84d91f568a8695782169.jpeg",
     "static/media/gosling.jpeg": "/redux-movie/static/media/gosling.d7dd52744ecbd4e7b0c6.jpeg",
     "index.html": "/redux-movie/index.html",
-    "main.43c655f4.css.map": "/redux-movie/static/css/main.43c655f4.css.map",
-    "main.53d856c7.js.map": "/redux-movie/static/js/main.53d856c7.js.map"
+    "main.53c606e6.css.map": "/redux-movie/static/css/main.53c606e6.css.map",
+    "main.397d5cb8.js.map": "/redux-movie/static/js/main.397d5cb8.js.map"
   },
   "entrypoints": [
-    "static/css/main.43c655f4.css",
-    "static/js/main.53d856c7.js"
+    "static/css/main.53c606e6.css",
+    "static/js/main.397d5cb8.js"
   ]
 }
